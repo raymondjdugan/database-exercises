@@ -1,4 +1,7 @@
+USE raymond;
+
 drop table if exists albulms;
+
 create table if not exists albulms(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     artist varchar(255),
