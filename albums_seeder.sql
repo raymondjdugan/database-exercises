@@ -97,6 +97,7 @@ VALUES ('Guns N'' Roses', 'Appetite for Destruction', '1987', '21.9', 'Hard rock
 INSERT INTO `albums` (`artist`, `album_name`, `release_date`, `sales`, `genres`)
 VALUES ('Elton John', '	Goodbye Yellow Brick Road', '1973', '8.5', 'rock, pop rock, glam rock');
 
+TRUNCATE albums;
 
 INSERT INTO `albums` (`artist`, `album_name`, `release_date`, `sales`, `genres`)
 VALUES ('Michael Jackson', 'Thriller', '1982', '49.2', 'Pop, post-disco, funk, rock'),
@@ -130,3 +131,5 @@ VALUES ('Michael Jackson', 'Thriller', '1982', '49.2', 'Pop, post-disco, funk, r
        ('Santana', 'Supernatural', '1999', '20.5', 'Latin rock'),
        ('Guns N'' Roses', 'Appetite for Destruction', '1987', '21.9', 'Hard rock'),
        ('Elton John', 'Goodbye Yellow Brick Road', '1973', '8.5', 'rock, pop rock, glam rock');
+
+SELECT * FROM albums;
