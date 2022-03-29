@@ -113,6 +113,8 @@ VALUES ('Michael Jackson', 'Thriller', '1982', '49.2', 'Pop, post-disco, funk, r
        ('John Travolta', 'Grease: The Original Soundtrack from the Motion Picture', '1978', '14.4', 'Rock and roll'),
        ('Led Zeppelin', 'Led Zeppelin IV', '1971', '29.0', 'Hard rock, heavy metal, folk rock'),
        ('Michael Jackson', 'Bad', '1987', '21.1', 'Pop, rhythm and blues, funk and rock'),
+       ('Alanis Morissette', 'Jagged Little Pill', '1995', '24.3', 'Alternative rock'),
+       ('Michael Jackson', 'Dangerous', '1991', '17.0', 'New jack swing, R&B and pop'),
        ('Celine Dion', 'Falling into You', '1996', '21.1', 'Pop, soft rock'),
        ('The Beatles', 'Sgt. Pepper''s Lonely Hearts Club Band', '1967', '18.21', 'Rock'),
        ('Patrick Swayze', 'Dirty Dancing', '1987', '17.9', 'Pop, rock, R&B'),
