@@ -5,3 +5,4 @@ USE raymond;
 CREATE INDEX albums_name_combo ON albums (album_name, artist);
 
 DESCRIBE albums;
+

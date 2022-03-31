@@ -2,10 +2,10 @@ USE raymond;
 #TODO: write a query that shows each department along with the name of the current manager for that department.
 SELECT DISTINCT d.dept_name                            AS 'Department Name',
                 CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager'
-FROM employees as e
-         JOIN dept_emp as de
+FROM employees AS e
+         JOIN dept_emp AS de
               ON de.emp_no = e.emp_no
-         JOIN departments as d
+         JOIN departments AS d
               ON d.dept_no = de.dept_no
          JOIN dept_manager AS dm
               ON de.emp_no = dm.emp_no
@@ -15,10 +15,10 @@ ORDER BY d.dept_name;
 #TODO: Find the name of all departments currently managed by women.
 SELECT DISTINCT d.dept_name                            AS 'Department Name',
                 CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager'
-FROM employees as e
-         JOIN dept_emp as de
+FROM employees AS e
+         JOIN dept_emp AS de
               ON de.emp_no = e.emp_no
-         JOIN departments as d
+         JOIN departments AS d
               ON d.dept_no = de.dept_no
          JOIN dept_manager AS dm
               ON de.emp_no = dm.emp_no
@@ -41,10 +41,10 @@ ORDER BY count(title) DESC;
 SELECT DISTINCT d.dept_name                            AS 'Department Name',
                 CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager',
                 salary                                 AS 'Salary'
-FROM employees as e
-         JOIN dept_emp as de
+FROM employees AS e
+         JOIN dept_emp AS de
               ON de.emp_no = e.emp_no
-         JOIN departments as d
+         JOIN departments AS d
               ON d.dept_no = de.dept_no
          JOIN dept_manager AS dm
               ON de.emp_no = dm.emp_no
@@ -60,10 +60,10 @@ SELECT CONCAT(e.first_name, ' ', e.last_name) AS 'Employee',
        d.dept_name                            AS 'Department Name',
        CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager'
 FROM employees AS e
-         JOIN dept_emp as de
+         LEFT JOIN dept_emp AS de
               ON de.emp_no = e.emp_no
-         JOIN departments as d
+         LEFT JOIN departments AS d
               ON d.dept_no = de.dept_no
-         JOIN dept_manager AS dm
+         LEFT JOIN dept_manager AS dm
               ON de.emp_no = dm.emp_no
-WHERE de.to_date >= CURDATE()
+WHERE de.to_date >= CURDATE();
