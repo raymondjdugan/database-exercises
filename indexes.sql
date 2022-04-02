@@ -7,3 +7,4 @@ CREATE TABLE authors (
     CONSTRAINT  UC_Person UNIQUE (first_name, last_name)
 );
 DESCRIBE authors;
+

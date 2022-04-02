@@ -49,3 +49,10 @@ WHERE dept_no IN (
     )
 );
 
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no In (
+    SELECT emp_no
+    FROM salaries
+    WHERE salary = (SELECT MAX(salary) FROM salaries)
+    )
