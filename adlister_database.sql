@@ -1,17 +1,5 @@
 USE raymond;
 
-CREATE TABLE IF NOT EXISTS ad_users
-(
-    id         INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    first_name varchar(255) NOT NULL,
-    last_name  varchar(255) NOT NULL,
-    email      varchar(255) UNIQUE,
-    login_id   int UNSIGNED,
-    address_id int UNSIGNED,
-    FOREIGN KEY (login_id) REFERENCES credentials (id),
-    FOREIGN KEY (address_id) REFERENCES user_address (id)
-);
-
 CREATE TABLE IF NOT EXISTS credentials
 (
     id       INT UNSIGNED  NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -28,6 +16,25 @@ CREATE TABLE IF NOT EXISTS user_address
     state   varchar(2),
     zip     varchar(15)
 );
+
+CREATE TABLE IF NOT EXISTS ad_users
+(
+    id         INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name varchar(255) NOT NULL,
+    last_name  varchar(255) NOT NULL,
+    email      varchar(255) UNIQUE,
+    login_id   int UNSIGNED,
+    address_id int UNSIGNED,
+    FOREIGN KEY (login_id) REFERENCES credentials (id),
+    FOREIGN KEY (address_id) REFERENCES user_address (id)
+);
+
+CREATE TABLE IF NOT EXISTS ad_category
+(
+    id          INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    category_name varchar(255) UNIQUE
+);
+
 
 CREATE TABLE IF NOT EXISTS ad
 (
@@ -46,9 +53,4 @@ CREATE TABLE IF NOT EXISTS user_ad
     FOREIGN KEY (cat_id) REFERENCES ad_category (id)
 );
 
-CREATE TABLE IF NOT EXISTS ad_category
-(
-    id          INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    category_name varchar(255) UNIQUE
-);
 
